@@ -1,5 +1,8 @@
 # EX-11-EMI-CALCULATOR
 
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
+
 ## AIM
 
 To write a program to prepare EMI calculator using function without return type and with arguments.
@@ -14,10 +17,31 @@ To write a program to prepare EMI calculator using function without return type 
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <math.h> 
+void calculateEMI(float p, float r, int t);
+
+int main() {
+    float p, r;
+    int t;
+    scanf("%f%f", &p,&r);
+    scanf("%d", &t);
+    calculateEMI(p,r,t);
+    return 0;
+}
+
+void calculateEMI(float p, float r, int t) {
+    float emi;
+    emi = (p* r * pow(1 + r, t)) / (pow(1 + r, t) - 1);
+    printf("Monthly EMI is: %.2f\n", emi);
+}
+```
+
 
 
 ## OUTPUT
-
+![image](https://github.com/user-attachments/assets/db98938e-9133-4017-b0f1-959b752694e8)
 
 
 
@@ -30,6 +54,9 @@ Thus the program to prepare EMI calculator using function without return type wi
 
 
 # EX-12-FIBONACCI-SERIES
+
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
 ## AIM
 To write a C program to generate the Fibonacci series for the value 6.
 
@@ -43,9 +70,27 @@ To write a C program to generate the Fibonacci series for the value 6.
 7.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    int n = 6; 
+    int a = 0, b= 1, next, i;
+    for (i = 1; i <= n; i++) 
+    {
+        printf("%d ", a);
+        next = a+b;  
+        a = b;       
+        b = next;         
+    }
+    printf("\n");
+    return 0;
+}
+```
 
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/bcad4fa2-edec-4f29-a847-62faba4b5e4d)
 
 
 
@@ -60,6 +105,9 @@ Thus the program to generate the Fibonacci series for the value 6 has been execu
 
 
 # EX-13-ONE-DIMENSIONAL-ARRAY
+
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
 ## AIM
 To write a C program to read n elements as input and print the last element of the array.
 
@@ -71,8 +119,25 @@ To write a C program to read n elements as input and print the last element of t
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    scanf("%d", &n);
+    int arr[n]; 
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+    printf("The last element is: %d\n", arr[n-1]);
+    return 0;
+}
+```
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/466e8ff7-fff9-44f4-8ae0-7a46faa09d44)
+
 
 
 
@@ -89,6 +154,9 @@ Thus the program to read n elements as input and print the last element of the a
 
 
 # EX-14-POSITIVE-ARRAY-ELEMENTS
+
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
 ## AIM
 To write a C Program to count total number of positive elements in an array.
 
@@ -101,9 +169,33 @@ To write a C Program to count total number of positive elements in an array.
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    int n, i, count = 0;
+    scanf("%d", &n);
+    int arr[n]; 
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    for (i = 0; i < n; i++) {
+        if (arr[i] > 0) 
+        {
+            count++;
+        }
+    }
+    printf("Total number of positive elements = %d\n", count);
+    return 0;
+}
+```
 
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/ac75ce35-1e04-48f5-b141-0bb725d89050)
+
 
 
 
@@ -122,6 +214,9 @@ Thus the program to count total number of positive elements in an array has been
 
 # EX -15 - Replace All Even Elements With 'E' In One Dimensional Array
 
+## Name : Thanushree Vijayakanth
+## Register Number : 212224110054
+
 ## Aim:
 To write a C program to replace all even elements with 'E' in one dimensional array
 
@@ -137,9 +232,35 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
  Print the updated array after replacements.
 
 ## Program:
+```
+#include <stdio.h>
+
+int main() 
+{
+    int n, i;
+    scanf("%d", &n);
+    int arr[n]; 
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+    for (i = 0; i < n; i++) 
+    {
+        if (arr[i] % 2 == 0) 
+        {
+            printf("E ");  
+        } else 
+        {
+            printf("%d ", arr[i]);  
+        }
+    }
+    printf("\n");
+    return 0;
+}
+```
 
 ## Output:
- 
+ ![image](https://github.com/user-attachments/assets/2c71b6ba-816b-4099-b970-0cd618db5312)
 
 
 ## Result:
